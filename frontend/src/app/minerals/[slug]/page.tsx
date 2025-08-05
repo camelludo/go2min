@@ -4,6 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowLeft, Download, MessageCircle } from "lucide-react"
 import Link from "next/link"
 
+// Force dynamic rendering to avoid SSR issues
+export const dynamic = 'force-dynamic'
+
 // Temporary static data - will be replaced with CMS data
 const mineralsData = {
   boron: {
