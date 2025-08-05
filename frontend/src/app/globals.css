@@ -1,48 +1,88 @@
 @import "tailwindcss";
 
 :root {
+  /* Geological Base Colors */
   --background: 0 0% 100%;
-  --foreground: 0 0% 3.9%;
+  --foreground: 15 8% 15%;
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 3.9%;
+  --card-foreground: 15 8% 15%;
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 3.9%;
-  --primary: 0 0% 9%;
+  --popover-foreground: 15 8% 15%;
+  
+  /* Turkish Copper & Mineral Primary */
+  --primary: 16 85% 45%;
   --primary-foreground: 0 0% 98%;
-  --secondary: 0 0% 96.1%;
-  --secondary-foreground: 0 0% 9%;
-  --muted: 0 0% 96.1%;
-  --muted-foreground: 0 0% 45.1%;
-  --accent: 0 0% 96.1%;
-  --accent-foreground: 0 0% 9%;
+  
+  /* Warm Stone Secondary */
+  --secondary: 32 15% 92%;
+  --secondary-foreground: 15 8% 15%;
+  
+  /* Geological Neutrals */
+  --muted: 32 8% 95%;
+  --muted-foreground: 15 5% 45%;
+  --accent: 28 20% 88%;
+  --accent-foreground: 15 8% 15%;
+  
+  /* System Colors */
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 89.8%;
-  --input: 0 0% 89.8%;
-  --ring: 0 0% 3.9%;
-  --radius: 0.5rem;
+  --border: 32 12% 88%;
+  --input: 32 12% 88%;
+  --ring: 16 85% 45%;
+  --radius: 0.75rem;
+  
+  /* Mineral Inspired Colors */
+  --boron-blue: 217 91% 60%;
+  --feldspar-rose: 340 82% 75%;
+  --pumice-gray: 220 13% 69%;
+  --bentonite-amber: 43 96% 56%;
+  --magnesite-emerald: 142 76% 36%;
+  
+  /* Geological Gradients */
+  --crystal-gradient: linear-gradient(135deg, hsl(16 85% 45%) 0%, hsl(28 78% 54%) 100%);
+  --mineral-gradient: linear-gradient(135deg, hsl(32 15% 92%) 0%, hsl(28 20% 88%) 100%);
+  --stone-texture: radial-gradient(circle at 25% 25%, hsl(32 15% 94%) 0%, hsl(32 8% 92%) 50%, hsl(28 10% 90%) 100%);
+  
+  /* Depth & Shadows */
+  --shadow-mineral: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1), 0 0 0 1px rgb(16 85% 45% / 0.05);
+  --shadow-crystal: 0 10px 15px -3px rgb(16 85% 45% / 0.1), 0 4px 6px -4px rgb(16 85% 45% / 0.1);
+  --shadow-depth: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
 .dark {
-  --background: 0 0% 3.9%;
-  --foreground: 0 0% 98%;
-  --card: 0 0% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --popover: 0 0% 3.9%;
-  --popover-foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
-  --primary-foreground: 0 0% 9%;
-  --secondary: 0 0% 14.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 0 0% 14.9%;
-  --muted-foreground: 0 0% 63.9%;
-  --accent: 0 0% 14.9%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
+  /* Dark Geological Base */
+  --background: 15 8% 5%;
+  --foreground: 32 15% 92%;
+  --card: 15 8% 8%;
+  --card-foreground: 32 15% 92%;
+  --popover: 15 8% 8%;
+  --popover-foreground: 32 15% 92%;
+  
+  /* Bright Copper Primary for Dark */
+  --primary: 16 95% 55%;
+  --primary-foreground: 15 8% 5%;
+  
+  /* Dark Stone Secondary */
+  --secondary: 15 8% 15%;
+  --secondary-foreground: 32 15% 92%;
+  
+  /* Dark Geological Neutrals */
+  --muted: 15 5% 12%;
+  --muted-foreground: 32 8% 65%;
+  --accent: 15 8% 18%;
+  --accent-foreground: 32 15% 92%;
+  
+  /* Dark System Colors */
+  --destructive: 0 75% 55%;
   --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 14.9%;
-  --input: 0 0% 14.9%;
-  --ring: 0 0% 83.1%;
+  --border: 15 8% 18%;
+  --input: 15 8% 18%;
+  --ring: 16 95% 55%;
+  
+  /* Dark Gradients */
+  --crystal-gradient: linear-gradient(135deg, hsl(16 95% 55%) 0%, hsl(28 88% 64%) 100%);
+  --mineral-gradient: linear-gradient(135deg, hsl(15 8% 15%) 0%, hsl(15 8% 18%) 100%);
+  --stone-texture: radial-gradient(circle at 25% 25%, hsl(15 8% 10%) 0%, hsl(15 5% 8%) 50%, hsl(15 8% 5%) 100%);
 }
 
 @theme inline {
@@ -101,4 +141,216 @@ body {
   background: hsl(var(--background));
   color: hsl(var(--foreground));
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
+}
+
+/* ============================================
+   🎨 GEOLOGICAL DESIGN SYSTEM
+   ============================================ */
+
+/* Crystal Pattern Backgrounds */
+.crystal-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 50%, hsl(16 85% 45% / 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, hsl(28 78% 54% / 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, hsl(16 85% 45% / 0.03) 0%, transparent 50%);
+}
+
+.mineral-texture {
+  background: var(--stone-texture);
+  position: relative;
+}
+
+.mineral-texture::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(45deg, transparent 25%, hsl(32 15% 94% / 0.5) 25%, hsl(32 15% 94% / 0.5) 50%, transparent 50%),
+    linear-gradient(-45deg, transparent 25%, hsl(32 15% 94% / 0.3) 25%, hsl(32 15% 94% / 0.3) 50%, transparent 50%);
+  background-size: 20px 20px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Geological Gradients */
+.gradient-copper {
+  background: var(--crystal-gradient);
+}
+
+.gradient-mineral {
+  background: var(--mineral-gradient);
+}
+
+/* Beautiful Shadows */
+.shadow-mineral {
+  box-shadow: var(--shadow-mineral);
+}
+
+.shadow-crystal {
+  box-shadow: var(--shadow-crystal);
+}
+
+.shadow-depth {
+  box-shadow: var(--shadow-depth);
+}
+
+/* Stunning Animations */
+@keyframes crystallize {
+  0% { 
+    transform: scale(0.95) rotate(-1deg);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  }
+  100% { 
+    transform: scale(1) rotate(0deg);
+    box-shadow: var(--shadow-crystal);
+  }
+}
+
+@keyframes mineral-shine {
+  0%, 100% { 
+    background-position: -200% center;
+  }
+  50% { 
+    background-position: 200% center;
+  }
+}
+
+@keyframes geological-float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% { 
+    transform: translateY(-4px) rotate(0.5deg);
+  }
+}
+
+@keyframes copper-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(16 85% 45% / 0.2), var(--shadow-crystal);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(16 85% 45% / 0.4), var(--shadow-crystal);
+  }
+}
+
+/* Interactive Elements */
+.hover-crystallize {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-crystallize:hover {
+  animation: crystallize 0.3s ease-out forwards;
+}
+
+.hover-mineral-shine {
+  position: relative;
+  overflow: hidden;
+  background: var(--crystal-gradient);
+  background-size: 200% 100%;
+  transition: all 0.3s ease;
+}
+
+.hover-mineral-shine:hover {
+  animation: mineral-shine 1.5s ease infinite;
+}
+
+.hover-geological-float:hover {
+  animation: geological-float 2s ease-in-out infinite;
+}
+
+.hover-copper-glow:hover {
+  animation: copper-glow 2s ease-in-out infinite;
+}
+
+/* Typography Enhancements */
+.text-gradient-copper {
+  background: var(--crystal-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-mineral-accent {
+  color: hsl(var(--primary));
+  text-shadow: 0 2px 4px hsl(var(--primary) / 0.1);
+}
+
+/* Card Enhancements */
+.card-mineral {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  box-shadow: var(--shadow-mineral);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-mineral::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.1), transparent);
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.card-mineral:hover::before {
+  left: 100%;
+}
+
+.card-mineral:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-crystal);
+  border-color: hsl(var(--primary) / 0.3);
+}
+
+/* Button Enhancements */
+.btn-mineral {
+  background: var(--crystal-gradient);
+  border: none;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 0.2);
+  box-shadow: var(--shadow-mineral);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-mineral::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-mineral:hover::before {
+  left: 100%;
+}
+
+.btn-mineral:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-crystal);
+}
+
+.btn-mineral:active {
+  transform: translateY(0);
+}
+
+/* Responsive Geological Patterns */
+@media (min-width: 768px) {
+  .crystal-pattern {
+    background-image: 
+      radial-gradient(circle at 20% 50%, hsl(16 85% 45% / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(28 78% 54% / 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(16 85% 45% / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 60% 60%, hsl(32 15% 92% / 0.3) 0%, transparent 50%);
+  }
 }
