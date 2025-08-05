@@ -117,12 +117,12 @@ export default async function MineralPage({ params }: { params: Promise<{ slug: 
       {/* Hero Section */}
       <section className="bg-white py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Button variant="ghost" size="sm" asChild className="mb-6">
-            <Link href="/minerals">
+          <Link href="/minerals" className="inline-block mb-6">
+            <Button variant="ghost" size="sm">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Minerals
-            </Link>
-          </Button>
+            </Button>
+          </Link>
 
           <div className="grid gap-8 lg:grid-cols-2">
             <div>
@@ -253,17 +253,16 @@ export default async function MineralPage({ params }: { params: Promise<{ slug: 
             <Button size="lg" variant="secondary">
               Request Quote
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="bg-white/10 text-white border-white hover:bg-white hover:text-primary"
-              asChild
-            >
-              <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="bg-white/10 text-white border-white hover:bg-white hover:text-primary"
+              >
                 <MessageCircle className="mr-2 h-4 w-4" />
                 WhatsApp Us
-              </a>
-            </Button>
+              </Button>
+            </a>
           </div>
         </div>
       </section>

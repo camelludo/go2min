@@ -64,12 +64,12 @@ export function Navigation() {
             </div>
 
             {/* WhatsApp */}
-            <Button variant="ghost" size="sm" asChild>
-              <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer">
+              <Button variant="ghost" size="sm">
                 <Phone className="h-4 w-4 mr-2" />
                 WhatsApp
-              </a>
-            </Button>
+              </Button>
+            </a>
 
             {/* Main CTA */}
             <Button size="sm">Get Quote</Button>
@@ -113,12 +113,12 @@ export function Navigation() {
                 Get Quote
               </Button>
               
-              <Button variant="outline" className="w-full mt-2" size="sm" asChild>
-                <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer" className="block mt-2">
+                <Button variant="outline" className="w-full" size="sm">
                   <Phone className="h-4 w-4 mr-2" />
                   WhatsApp
-                </a>
-              </Button>
+                </Button>
+              </a>
             </div>
           </div>
         </div>

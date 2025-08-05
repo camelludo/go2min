@@ -64,17 +64,16 @@ export function Footer() {
             </div>
 
             {/* WhatsApp CTA */}
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="mt-6 border-green-600 text-green-600 hover:bg-green-600 hover:text-white"
-              asChild
-            >
-              <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="mt-6 border-green-600 text-green-600 hover:bg-green-600 hover:text-white"
+              >
                 <MessageCircle className="mr-2 h-4 w-4" />
                 Chat on WhatsApp
-              </a>
-            </Button>
+              </Button>
+            </a>
           </div>
 
           {/* Our Minerals */}

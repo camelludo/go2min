@@ -170,11 +170,11 @@ export function MineralShowcase() {
                     </div>
                     
                     <div className="flex gap-3">
-                      <Button variant="outline" size="sm" asChild className="flex-1 hover:border-copper-300 hover:bg-copper-50 hover:text-copper-700 transition-all duration-200 font-semibold">
-                        <Link href={`/minerals/${mineral.slug}`}>
+                      <Link href={`/minerals/${mineral.slug}`} className="flex-1">
+                        <Button variant="outline" size="sm" className="w-full hover:border-copper-300 hover:bg-copper-50 hover:text-copper-700 transition-all duration-200 font-semibold">
                           Learn More
-                        </Link>
-                      </Button>
+                        </Button>
+                      </Link>
                       <Button size="sm" className="flex-1 btn-mineral hover-mineral-shine font-semibold">
                         Get Quote
                         <ArrowRight className="ml-2 h-4 w-4" />

@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
@@ -9,16 +8,16 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-crystal-gradient text-white shadow-mineral hover:shadow-crystal hover:-translate-y-0.5 active:translate-y-0 border-0",
+        default: "bg-primary text-primary-foreground shadow-mineral hover:shadow-crystal hover:-translate-y-0.5 active:translate-y-0 hover:bg-primary/90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-mineral hover:shadow-crystal hover:-translate-y-0.5",
         outline:
-          "border-2 border-copper-200 bg-background hover:bg-copper-50 hover:border-copper-400 hover:text-copper-700 shadow-sm hover:shadow-mineral",
+          "border-2 border-input bg-background hover:bg-accent hover:text-accent-foreground shadow-sm hover:shadow-mineral",
         secondary:
-          "bg-stone-100 text-stone-700 hover:bg-stone-200 shadow-sm hover:shadow-mineral hover:-translate-y-0.5 border border-stone-200",
-        ghost: "hover:bg-copper-50 hover:text-copper-700 shadow-none hover:shadow-sm",
-        link: "text-copper-600 underline-offset-4 hover:underline hover:text-copper-700 shadow-none",
-        mineral: "bg-crystal-gradient text-white font-bold shadow-crystal hover:shadow-depth hover:-translate-y-1 active:translate-y-0 border-0 text-shadow",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm hover:shadow-mineral hover:-translate-y-0.5",
+        ghost: "hover:bg-accent hover:text-accent-foreground shadow-none hover:shadow-sm",
+        link: "text-primary underline-offset-4 hover:underline shadow-none",
+        mineral: "bg-primary text-primary-foreground font-bold shadow-crystal hover:shadow-depth hover:-translate-y-1 active:translate-y-0 hover:bg-primary/90",
       },
       size: {
         default: "h-11 px-6 py-2.5 rounded-xl",
@@ -41,22 +40,23 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button"
-    const isMineral = variant === "mineral" || variant === "default"
+  ({ className, variant, size, asChild = false, children, ...props }, ref) => {
+    if (asChild) {
+      return (
+        <span className={cn(buttonVariants({ variant, size, className }))}>
+          {children}
+        </span>
+      )
+    }
     
     return (
-      <Comp
+      <button
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
       >
-        {/* Shimmer effect for mineral buttons */}
-        {isMineral && (
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 hover:opacity-100 transform -translate-x-full hover:translate-x-full transition-all duration-700 ease-out pointer-events-none" />
-        )}
-        {props.children}
-      </Comp>
+        {children}
+      </button>
     )
   }
 )

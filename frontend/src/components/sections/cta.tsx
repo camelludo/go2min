@@ -26,17 +26,16 @@ export function CTA() {
               Request Quote Now
             </Button>
             
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="w-full sm:w-auto bg-white/10 text-white border-white hover:bg-white hover:text-primary"
-              asChild
-            >
-              <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="w-full bg-white/10 text-white border-white hover:bg-white hover:text-primary"
+              >
                 <MessageCircle className="mr-2 h-4 w-4" />
                 Chat on WhatsApp
-              </a>
-            </Button>
+              </Button>
+            </a>
           </div>
 
           <div className="mt-8 flex items-center justify-center gap-x-6 text-sm text-gray-100">

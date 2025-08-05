@@ -108,11 +108,11 @@ export default function MineralsPage() {
                   </div>
                   
                   <div className="flex gap-3">
-                    <Button variant="outline" size="sm" asChild className="flex-1">
-                      <Link href={`/minerals/${mineral.slug}`}>
+                    <Link href={`/minerals/${mineral.slug}`} className="flex-1">
+                      <Button variant="outline" size="sm" className="w-full">
                         View Details
-                      </Link>
-                    </Button>
+                      </Button>
+                    </Link>
                     <Button size="sm" className="flex-1">
                       Get Quote
                       <ArrowRight className="ml-1 h-3 w-3" />
