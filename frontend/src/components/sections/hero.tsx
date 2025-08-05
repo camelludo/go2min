@@ -21,7 +21,7 @@ export function Hero() {
           
           {/* Subheadline */}
           <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-xl">
-            ISO-certified boron, feldspar, pumice, bentonite & magnesite from Turkey's 
+            ISO-certified boron, feldspar, pumice, bentonite & magnesite from Turkey&apos;s 
             leading exporters. Get instant quotes with guaranteed specifications.
           </p>
 

@@ -71,7 +71,7 @@ export function MineralShowcase() {
             Premium Turkish Minerals
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Direct from Turkey's richest deposits. ISO-certified quality for your industrial needs.
+            Direct from Turkey&apos;s richest deposits. ISO-certified quality for your industrial needs.
           </p>
         </div>
 

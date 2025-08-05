@@ -126,7 +126,7 @@ export default function MineralsPage() {
       <section className="bg-primary py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Can't Find What You're Looking For?
+            Can&apos;t Find What You&apos;re Looking For?
           </h2>
           <p className="text-lg text-gray-100 mb-8">
             Contact our experts for custom mineral solutions and technical support

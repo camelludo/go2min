@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowLeft, Download, MessageCircle } from "lucide-react"
 import Link from "next/link"
 
@@ -84,8 +84,9 @@ const mineralsData = {
   // Add other minerals here...
 }
 
-export default function MineralPage({ params }: { params: { slug: string } }) {
-  const mineral = mineralsData[params.slug as keyof typeof mineralsData]
+export default async function MineralPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const mineral = mineralsData[slug as keyof typeof mineralsData]
 
   if (!mineral) {
     notFound()
@@ -180,7 +181,7 @@ export default function MineralPage({ params }: { params: { slug: string } }) {
                     {Object.entries(specs).map(([key, value]) => (
                       <div key={key} className="flex justify-between py-2 border-b last:border-0">
                         <dt className="text-sm text-gray-600">{key}</dt>
-                        <dd className="text-sm font-medium text-gray-900">{value}</dd>
+                        <dd className="text-sm font-medium text-gray-900">{String(value)}</dd>
                       </div>
                     ))}
                   </dl>
