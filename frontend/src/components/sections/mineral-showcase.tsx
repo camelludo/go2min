@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Beaker, Mountain, Flame, Layers, Sparkles } from "lucide-react"
 
@@ -93,7 +93,7 @@ export function MineralShowcase() {
               <span className="block text-gradient-copper">Minerals</span>
             </h2>
             <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
-              Direct from Turkey's richest geological deposits. ISO-certified quality 
+              Direct from Turkey&apos;s richest geological deposits. ISO-certified quality 
               <span className="text-mineral-accent font-semibold"> engineered for your industrial excellence.</span>
             </p>
           </div>

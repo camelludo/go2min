@@ -40,7 +40,7 @@ export function Hero() {
           {/* Enhanced Subheadline */}
           <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <p className="mt-8 text-xl leading-relaxed text-muted-foreground sm:text-2xl max-w-4xl mx-auto">
-              ISO-certified <span className="text-mineral-accent font-semibold">boron, feldspar, pumice, bentonite & magnesite</span> from Turkey's 
+              ISO-certified <span className="text-mineral-accent font-semibold">boron, feldspar, pumice, bentonite & magnesite</span> from Turkey&apos;s 
               richest geological deposits. Get instant quotes with guaranteed specifications.
             </p>
           </div>
@@ -59,7 +59,7 @@ export function Hero() {
           {/* Beautiful Trust Indicators */}
           <div className="mt-16 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {trustIndicators.map((indicator, index) => (
+              {trustIndicators.map((indicator) => (
                 <div key={indicator} className="group">
                   <div className="flex items-center justify-center gap-3 p-4 rounded-xl bg-white/60 backdrop-blur-sm border border-copper-100 shadow-mineral hover-crystallize hover:shadow-crystal transition-all duration-300">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-crystal-gradient flex items-center justify-center shadow-crystal">
@@ -91,7 +91,7 @@ export function Hero() {
               { icon: "🧪", name: "Chemicals", color: "text-mineral-bentonite" },
               { icon: "🌱", name: "Agriculture", color: "text-mineral-magnesite" },
               { icon: "🔧", name: "Steel & Foundry", color: "text-mineral-pumice" }
-            ].map((industry, index) => (
+            ].map((industry) => (
               <div key={industry.name} className="group hover-geological-float">
                 <div className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-white/40 backdrop-blur-sm border border-stone-200 hover:border-copper-300 hover:bg-white/60 transition-all duration-300 hover:shadow-crystal">
                   <span className="text-3xl group-hover:scale-110 transition-transform duration-300">
