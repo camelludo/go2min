@@ -1,7 +1,10 @@
+"use client"
+
 import Link from "next/link"
 import { CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Beaker, Mountain, Flame, Layers, Sparkles } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 const minerals = [
   {
@@ -77,7 +80,7 @@ export function MineralShowcase() {
       {/* Beautiful Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-10 w-72 h-72 bg-copper-200/10 rounded-full blur-3xl animate-geological-float"></div>
-        <div className="absolute bottom-1/4 right-10 w-64 h-64 bg-stone-300/15 rounded-full blur-3xl animate-geological-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/4 right-10 w-64 h-64 bg-stone-300/15 rounded-full blur-3xl animate-geological-float animation-delay-2000"></div>
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -106,8 +109,14 @@ export function MineralShowcase() {
             return (
               <div 
                 key={mineral.id} 
-                className="animate-fade-in-up hover-crystallize"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={cn(
+                  "animate-fade-in-up card-mineral group relative overflow-hidden hover-crystallize bg-gradient-to-br from-background to-card",
+                  index === 0 && "animation-delay-0",
+                  index === 1 && "animation-delay-100",
+                  index === 2 && "animation-delay-200",
+                  index === 3 && "animation-delay-300",
+                  index === 4 && "animation-delay-400"
+                )}
               >
                 <div className={`group relative overflow-hidden rounded-2xl bg-white/80 backdrop-blur-sm border border-stone-200/60 shadow-mineral hover:shadow-crystal transition-all duration-500 ${mineral.shadowColor}`}>
                   {/* Mineral-specific gradient overlay */}
@@ -179,7 +188,7 @@ export function MineralShowcase() {
         </div>
 
         {/* Spectacular CTA Section */}
-        <div className="mt-20 text-center animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+        <div className="mt-20 text-center animate-fade-in-up animation-delay-800">
           <div className="mx-auto max-w-2xl">
             <div className="relative p-8 rounded-3xl bg-white/60 backdrop-blur-sm border border-copper-200/60 shadow-crystal">
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-copper-50/50 to-stone-50/50"></div>
@@ -212,8 +221,8 @@ export function MineralShowcase() {
 
       {/* Floating Geological Elements */}
       <div className="absolute top-32 left-20 w-3 h-3 bg-copper-400 rounded-full animate-geological-float opacity-40"></div>
-      <div className="absolute top-64 right-32 w-2 h-2 bg-stone-500 rounded-full animate-geological-float opacity-30" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute bottom-40 left-32 w-4 h-4 bg-copper-300 rounded-full animate-geological-float opacity-50" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-64 right-32 w-2 h-2 bg-stone-500 rounded-full animate-geological-float opacity-30 animation-delay-1000"></div>
+      <div className="absolute bottom-40 left-32 w-4 h-4 bg-copper-300 rounded-full animate-geological-float opacity-50 animation-delay-2000"></div>
     </section>
   )
 }

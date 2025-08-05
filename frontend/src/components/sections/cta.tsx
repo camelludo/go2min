@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { MessageCircle, FileText } from "lucide-react"
 

@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle } from "lucide-react"
 
@@ -15,8 +17,8 @@ export function Hero() {
       <div className="absolute inset-0 -z-20">
         <div className="absolute inset-0 bg-gradient-to-br from-copper-50 via-stone-50 to-copper-50/30"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-copper-200/20 rounded-full blur-3xl animate-geological-float"></div>
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-stone-200/30 rounded-full blur-3xl animate-geological-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-copper-300/10 rounded-full blur-2xl animate-geological-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-stone-200/30 rounded-full blur-3xl animate-geological-float animation-delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-copper-300/10 rounded-full blur-2xl animate-geological-float animation-delay-2000"></div>
       </div>
 
       {/* Geological Pattern Overlay */}
@@ -38,7 +40,7 @@ export function Hero() {
           </div>
           
           {/* Enhanced Subheadline */}
-          <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <div className="animate-fade-in-up animation-delay-200">
             <p className="mt-8 text-xl leading-relaxed text-muted-foreground sm:text-2xl max-w-4xl mx-auto">
               ISO-certified <span className="text-mineral-accent font-semibold">boron, feldspar, pumice, bentonite & magnesite</span> from Turkey&apos;s 
               richest geological deposits. Get instant quotes with guaranteed specifications.
@@ -46,7 +48,7 @@ export function Hero() {
           </div>
 
           {/* Stunning CTA Buttons */}
-          <div className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row animate-fade-in-up animation-delay-400">
             <Button size="lg" className="btn-mineral hover-mineral-shine w-full sm:w-auto text-lg px-8 py-4 h-14">
               Get Instant Quote
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -57,7 +59,7 @@ export function Hero() {
           </div>
 
           {/* Beautiful Trust Indicators */}
-          <div className="mt-16 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <div className="mt-16 animate-fade-in-up animation-delay-600">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {trustIndicators.map((indicator) => (
                 <div key={indicator} className="group">
@@ -76,7 +78,7 @@ export function Hero() {
         </div>
 
         {/* Magnificent Industries Section */}
-        <div className="mt-20 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+        <div className="mt-20 animate-fade-in-up animation-delay-800">
           <div className="text-center mb-8">
             <p className="text-sm font-bold text-copper-600 tracking-widest uppercase mb-2">
               Trusted by Leading Manufacturers
@@ -109,9 +111,9 @@ export function Hero() {
 
       {/* Spectacular Floating Elements */}
       <div className="absolute top-20 left-10 w-4 h-4 bg-copper-400 rounded-full animate-geological-float opacity-60"></div>
-      <div className="absolute top-40 right-20 w-6 h-6 bg-stone-400 rounded-full animate-geological-float opacity-40" style={{ animationDelay: '1.5s' }}></div>
-      <div className="absolute bottom-32 left-20 w-3 h-3 bg-copper-500 rounded-full animate-geological-float opacity-50" style={{ animationDelay: '3s' }}></div>
-      <div className="absolute bottom-20 right-10 w-5 h-5 bg-stone-500 rounded-full animate-geological-float opacity-30" style={{ animationDelay: '2.5s' }}></div>
+      <div className="absolute top-40 right-20 w-6 h-6 bg-stone-400 rounded-full animate-geological-float opacity-40 animation-delay-1500"></div>
+      <div className="absolute bottom-32 left-20 w-3 h-3 bg-copper-500 rounded-full animate-geological-float opacity-50 animation-delay-3000"></div>
+      <div className="absolute bottom-20 right-10 w-5 h-5 bg-stone-500 rounded-full animate-geological-float opacity-30 animation-delay-2500"></div>
     </section>
   )
 }
