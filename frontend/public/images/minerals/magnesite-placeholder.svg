@@ -1,0 +1,15 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="url(#gradient-magnesite)"/>
+  <polygon points="90,100 110,70 130,100 110,130" fill="#16A34A" opacity="0.2"/>
+  <polygon points="290,190 310,160 330,190 310,220" fill="#15803D" opacity="0.15"/>
+  <circle cx="200" cy="150" r="45" fill="#166534" opacity="0.1"/>
+  <path d="M60 220 L160 170 L260 210 L360 160" stroke="#16A34A" stroke-width="2" opacity="0.3"/>
+  <text x="200" y="150" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#166534" opacity="0.8">MAGNESITE</text>
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#15803D" opacity="0.6">MgO: 45-47%</text>
+  <defs>
+    <linearGradient id="gradient-magnesite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D1FAE5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ECFDF5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

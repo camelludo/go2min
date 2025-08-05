@@ -1,0 +1,23 @@
+<svg width="1200" height="400" viewBox="0 0 1200 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="400" fill="url(#gradient-cta)"/>
+  
+  <!-- Topographic lines -->
+  <path d="M0 100 Q300 80 600 100 T1200 100" stroke="#D97706" stroke-width="1" opacity="0.2"/>
+  <path d="M0 150 Q300 130 600 150 T1200 150" stroke="#B45309" stroke-width="1" opacity="0.15"/>
+  <path d="M0 200 Q300 180 600 200 T1200 200" stroke="#92400E" stroke-width="1" opacity="0.1"/>
+  <path d="M0 250 Q300 230 600 250 T1200 250" stroke="#78350F" stroke-width="1" opacity="0.08"/>
+  <path d="M0 300 Q300 280 600 300 T1200 300" stroke="#451A03" stroke-width="1" opacity="0.05"/>
+  
+  <!-- Mineral dots -->
+  <circle cx="150" cy="120" r="3" fill="#D97706" opacity="0.4"/>
+  <circle cx="450" cy="180" r="4" fill="#B45309" opacity="0.3"/>
+  <circle cx="750" cy="140" r="3" fill="#92400E" opacity="0.35"/>
+  <circle cx="1050" cy="200" r="5" fill="#78350F" opacity="0.25"/>
+  
+  <defs>
+    <linearGradient id="gradient-cta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FEF3C7;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#FEE2E2;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,15 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="url(#gradient-bentonite)"/>
+  <ellipse cx="100" cy="90" rx="35" ry="25" fill="#F59E0B" opacity="0.2"/>
+  <ellipse cx="310" cy="210" rx="45" ry="30" fill="#D97706" opacity="0.15"/>
+  <ellipse cx="200" cy="150" rx="55" ry="40" fill="#B45309" opacity="0.1"/>
+  <path d="M50 240 L150 190 L250 230 L350 180" stroke="#F59E0B" stroke-width="2" opacity="0.3"/>
+  <text x="200" y="150" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#B45309" opacity="0.8">BENTONITE</text>
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#D97706" opacity="0.6">Swelling Clay</text>
+  <defs>
+    <linearGradient id="gradient-bentonite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FEF3C7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFBEB;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

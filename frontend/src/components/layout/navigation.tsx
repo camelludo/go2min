@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Globe, Phone } from "lucide-react"
 
@@ -32,7 +33,14 @@ export function Navigation() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-primary">Go2Mineral</span>
+              <Image
+                src="/images/go2mineral-logo.svg"
+                alt="Go2Mineral"
+                width={180}
+                height={54}
+                className="h-12 w-auto"
+                priority
+              />
             </Link>
           </div>
 

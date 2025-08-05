@@ -1,0 +1,15 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="url(#gradient-feldspar)"/>
+  <polygon points="80,100 120,80 160,100 140,140 100,140" fill="#EC4899" opacity="0.2"/>
+  <polygon points="280,180 320,160 360,180 340,220 300,220" fill="#DB2777" opacity="0.15"/>
+  <circle cx="200" cy="150" r="50" fill="#BE185D" opacity="0.1"/>
+  <path d="M30 200 L130 150 L230 190 L330 140" stroke="#EC4899" stroke-width="2" opacity="0.3"/>
+  <text x="200" y="150" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#BE185D" opacity="0.8">FELDSPAR</text>
+  <text x="200" y="180" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#DB2777" opacity="0.6">K2O: 11-13%</text>
+  <defs>
+    <linearGradient id="gradient-feldspar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FCE7F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FDF2F8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>

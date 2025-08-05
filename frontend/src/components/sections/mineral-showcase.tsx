@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Beaker, Mountain, Flame, Layers, Sparkles } from "lucide-react"
@@ -18,7 +19,8 @@ const minerals = [
     color: "text-mineral-boron",
     bgColor: "bg-mineral-boron/10",
     gradient: "from-mineral-boron/20 to-mineral-boron/5",
-    shadowColor: "shadow-[0_8px_30px_rgb(59,130,246,0.12)]"
+    shadowColor: "shadow-[0_8px_30px_rgb(59,130,246,0.12)]",
+    image: "/images/minerals/boron-placeholder.svg"
   },
   {
     id: "feldspar",
@@ -31,7 +33,8 @@ const minerals = [
     color: "text-mineral-feldspar",
     bgColor: "bg-mineral-feldspar/10",
     gradient: "from-mineral-feldspar/20 to-mineral-feldspar/5",
-    shadowColor: "shadow-[0_8px_30px_rgb(236,72,153,0.12)]"
+    shadowColor: "shadow-[0_8px_30px_rgb(236,72,153,0.12)]",
+    image: "/images/minerals/feldspar-placeholder.svg"
   },
   {
     id: "pumice-perlite",
@@ -44,7 +47,8 @@ const minerals = [
     color: "text-mineral-pumice",
     bgColor: "bg-mineral-pumice/10",
     gradient: "from-mineral-pumice/20 to-mineral-pumice/5",
-    shadowColor: "shadow-[0_8px_30px_rgb(107,114,128,0.12)]"
+    shadowColor: "shadow-[0_8px_30px_rgb(107,114,128,0.12)]",
+    image: "/images/minerals/pumice-placeholder.svg"
   },
   {
     id: "bentonite",
@@ -57,7 +61,8 @@ const minerals = [
     color: "text-mineral-bentonite",
     bgColor: "bg-mineral-bentonite/10",
     gradient: "from-mineral-bentonite/20 to-mineral-bentonite/5",
-    shadowColor: "shadow-[0_8px_30px_rgb(245,158,11,0.12)]"
+    shadowColor: "shadow-[0_8px_30px_rgb(245,158,11,0.12)]",
+    image: "/images/minerals/bentonite-placeholder.svg"
   },
   {
     id: "magnesite",
@@ -70,7 +75,8 @@ const minerals = [
     color: "text-mineral-magnesite",
     bgColor: "bg-mineral-magnesite/10",
     gradient: "from-mineral-magnesite/20 to-mineral-magnesite/5",
-    shadowColor: "shadow-[0_8px_30px_rgb(22,163,74,0.12)]"
+    shadowColor: "shadow-[0_8px_30px_rgb(22,163,74,0.12)]",
+    image: "/images/minerals/magnesite-placeholder.svg"
   }
 ]
 
@@ -124,6 +130,17 @@ export function MineralShowcase() {
                   
                   {/* Shimmer effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transform -translate-x-full group-hover:translate-x-full transition-all duration-1000 ease-out"></div>
+                  
+                  {/* Mineral Image */}
+                  <div className="relative h-48 overflow-hidden rounded-t-2xl">
+                    <Image
+                      src={mineral.image}
+                      alt={`${mineral.name} mineral`}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+                  </div>
                   
                   <CardHeader className="relative z-10 p-8">
                     <div className="flex items-start justify-between mb-6">

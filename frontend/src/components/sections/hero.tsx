@@ -49,7 +49,13 @@ export function Hero() {
 
           {/* Stunning CTA Buttons */}
           <div className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row animate-fade-in-up animation-delay-400">
-            <Button size="lg" className="btn-mineral hover-mineral-shine w-full sm:w-auto text-lg px-8 py-4 h-14">
+            <Button 
+              size="lg" 
+              className="btn-mineral hover-mineral-shine w-full sm:w-auto text-lg px-8 py-4 h-14"
+              onClick={() => {
+                document.getElementById('get-quote')?.scrollIntoView({ behavior: 'smooth' })
+              }}
+            >
               Get Instant Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
