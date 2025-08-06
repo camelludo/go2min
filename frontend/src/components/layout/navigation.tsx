@@ -4,7 +4,8 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Globe, Phone } from "lucide-react"
+import { Menu, X, Phone } from "lucide-react"
+import { LanguageSwitcher } from "@/components/ui/language-switcher"
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,14 +18,6 @@ export function Navigation() {
     { href: "/about", label: "About Us" },
   ]
 
-  const languages = [
-    { code: "en", label: "EN" },
-    { code: "tr", label: "TR" },
-    { code: "ar", label: "AR" },
-    { code: "zh", label: "中文" },
-    { code: "de", label: "DE" },
-    { code: "ru", label: "RU" },
-  ]
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -60,16 +53,7 @@ export function Navigation() {
           {/* Desktop Actions */}
           <div className="hidden md:flex md:items-center md:space-x-4">
             {/* Language Selector */}
-            <div className="flex items-center space-x-1">
-              <Globe className="h-4 w-4 text-gray-600" />
-              <select className="border-none bg-transparent text-sm font-medium text-gray-700 focus:outline-none">
-                {languages.map((lang) => (
-                  <option key={lang.code} value={lang.code}>
-                    {lang.label}
-                  </option>
-                ))}
-              </select>
-            </div>
+            <LanguageSwitcher />
 
             {/* WhatsApp */}
             <a href="https://wa.me/905555555555" target="_blank" rel="noopener noreferrer">

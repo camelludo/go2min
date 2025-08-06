@@ -1,5 +1,6 @@
 import { Hero } from "@/components/sections/hero"
 import { MineralShowcase } from "@/components/sections/mineral-showcase"
+import { TrustIndicators } from "@/components/sections/trust-indicators"
 import { LeadFormSection } from "@/components/sections/lead-form-section"
 import { Testimonials } from "@/components/sections/testimonials"
 import { FAQ } from "@/components/sections/faq"
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <TrustIndicators />
       <MineralShowcase />
       <LeadFormSection />
       <Testimonials />
