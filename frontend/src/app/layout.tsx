@@ -4,6 +4,8 @@ import "./globals.css";
 import { Navigation } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/toaster";
+import { WhatsAppButton } from "@/components/ui/whatsapp-button";
+import { SchemaMarkup } from "@/components/seo/schema-markup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,6 +54,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <SchemaMarkup />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
@@ -62,6 +67,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <Toaster />
+        <WhatsAppButton />
       </body>
     </html>
   );
